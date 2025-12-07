@@ -1,0 +1,88 @@
+
+.bg-primary { background: #4f46e5; }  
+.bg-secondary { background: #1e1b4b; } 
+
+section { scroll-margin-top: 80px; }
+
+header {
+   
+  @apply sticky top-0 z-50 bg-secondary bg-opacity-80 backdrop-blur-md shadow-md;
+}
+
+
+
+header a {
+    @apply px-4 py-2 rounded-lg transition-all duration-300;
+    @apply hover:text-white hover:bg-white/10;
+}
+
+.mobile-nav li {
+    @apply py-3 text-lg border-b border-white/10 hover:border-white/30;
+}
+
+.hero-img, .profile-card {
+    @apply rounded-2xl shadow-2xl object-cover transition-transform duration-300 ease-out;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-img:hover, .hero-img:active,
+.profile-card:hover, .profile-card:active {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f0ff, 0 0 25px #c700ff;
+}
+
+.about-img {
+    @apply rounded-2xl shadow-xl object-cover transition-all duration-500;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    animation: fadeIn 1.2s ease forwards;
+}
+
+.project-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-2xl shadow-neon transition-all duration-300 ease-out;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.project-card:hover, .project-card:active {
+    transform: translateY(-6px) scale(1.04);
+    border-color: rgba(255,255,255,0.4);
+    box-shadow: 0 0 20px #00f0ff, 0 0 30px #c700ff;
+}
+
+
+.btn {
+    @apply px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 ease-out;
+    background: #1e1b4b; 
+    box-shadow: 0 0 8px #4f46e5, 0 0 16px #00f0ff; 
+}
+
+.btn:hover, .btn:active {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 15px #4f46e5, 0 0 25px #00f0ff; 
+}
+#resume img {
+    @apply rounded-xl shadow-xl transition-all duration-300;
+    border: 2px solid rgba(255,255,255,0.15);
+}
+
+#contact p { @apply text-lg text-white/80; }
+
+footer, footer div { @apply text-center text-sm tracking-wide text-white/70; }
+
+.font-hero-font { font-family: "Poppins", sans-serif; }
+
+h1 span { color: #ffd700; }
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.shadow-neon {
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #c700ff, 0 0 30px #ff00f7;
+}
